@@ -1,7 +1,7 @@
 'use strict'
 
 const Cursos = require('../models/cursos')
-const eliminados = []
+
 // Función para crear un curso
 function crearCurso (req, res) {
     const cursoRecibido = req.body
@@ -85,14 +85,10 @@ function obtenerCurso (req, res) {
     )
 }
 
-function obtenerEliminados (req, res) {
-    res.status(200).send(eliminados)
-}
 
 module.exports = {
     crearCurso,
     obtenerCurso,
     editarCurso,
-    eliminarCurso, 
-    obtenerEliminados
+    eliminarCurso
 }
